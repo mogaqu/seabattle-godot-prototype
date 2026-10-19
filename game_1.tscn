@@ -1,0 +1,2295 @@
+[gd_scene load_steps=23 format=3 uid="uid://ydpl0ueuv46j"]
+
+[ext_resource type="Script" uid="uid://dpx8g7ktqocsh" path="res://game_1.gd" id="1_054oy"]
+[ext_resource type="FontFile" uid="uid://cd7vh2wuxctt6" path="res://Jost-400-Book.otf" id="2_mnogw"]
+[ext_resource type="Texture2D" uid="uid://bxuiubfursm5k" path="res://2.jpg" id="3_gf7sg"]
+[ext_resource type="Texture2D" uid="uid://bhsuexkgjrmv3" path="res://Без имени.png" id="4_60rns"]
+[ext_resource type="Script" uid="uid://slhyc83agf3e" path="res://buttons.gd" id="5_kwsaj"]
+[ext_resource type="Script" uid="uid://cqx5x2qjdaff2" path="res://pllayer_name.gd" id="5_x70i6"]
+[ext_resource type="Texture2D" uid="uid://bity6tmxujwov" path="res://DALL·E 2024-09-18 19.33.50 - A pixel art ship designed for a naval battle game, displayed in 512x512 resolution. The ship is medium-sized, with visible sails, cannons, and a woode_photo-resizer.ru (1) (1) (1) (1).jpg" id="5_xd2ec"]
+[ext_resource type="Texture2D" uid="uid://biw7kcv15kl2f" path="res://b5d8bfd6-d616-44f7-9e50-6223cbbf663e.jpg" id="8_1auue"]
+[ext_resource type="Texture2D" uid="uid://cmltok31pvx0r" path="res://аватарка с черепком.jpg" id="9_ykine"]
+[ext_resource type="FontFile" uid="uid://idpkrp0stwac" path="res://ofont.ru_Veles.ttf" id="10_7pg6t"]
+[ext_resource type="Texture2D" uid="uid://8vlwkqie4fi0" path="res://lhnsqbsp.bmp" id="10_xqqcr"]
+[ext_resource type="Texture2D" uid="uid://b75aq56bwj0sf" path="res://катер.jpg" id="11_2t7he"]
+[ext_resource type="Script" uid="uid://d12s20he4ee44" path="res://clear.gd" id="11_uxqc5"]
+[ext_resource type="Texture2D" uid="uid://couvtw3xbpcx4" path="res://эсминец.jpg" id="12_rbgyu"]
+[ext_resource type="Texture2D" uid="uid://tnt2bke8her2" path="res://кораблик 3.jpg" id="13_l0gwx"]
+[ext_resource type="Texture2D" uid="uid://cx26ltp3wteql" path="res://корабль 4.jpg" id="14_c5axn"]
+[ext_resource type="Script" uid="uid://lvjucumyof5w" path="res://крейсер.gd" id="16_7rlh3"]
+[ext_resource type="Texture2D" uid="uid://cdir205vfsxqa" path="res://8a59be2dbca08d67caf2400754036bc7.jpg" id="16_wflev"]
+[ext_resource type="Texture2D" uid="uid://c5vc1bnx7851g" path="res://istockphoto-495231802-612x612.jpg" id="17_btac8"]
+[ext_resource type="Texture2D" uid="uid://ptnxrry857aw" path="res://влед.jpg" id="19_ojdm7"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_vj0p2"]
+load_path = "res://.godot/imported/DALL·E 2024-09-18 19.33.50 - A pixel art ship designed for a naval battle game, displayed in 512x512 resolution. The ship is medium-sized, with visible sails, cannons, and a woode.jpg-422d150571fa1d848f0ce7c47cb7d545.ctex"
+
+[sub_resource type="FontFile" id="FontFile_my81h"]
+cache/0/40/0/ascent = 0.0
+cache/0/40/0/descent = 0.0
+cache/0/40/0/underline_position = 0.0
+cache/0/40/0/underline_thickness = 0.0
+cache/0/40/0/scale = 1.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+
+[node name="game1" type="Node2D"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+script = ExtResource("1_054oy")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+light_mask = 2
+visibility_layer = 0
+z_index = 10
+offset_left = -6.0
+offset_top = 1.0
+offset_right = 1149.0
+offset_bottom = 651.0
+color = Color(0.878431, 0.988235, 0.964706, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.0
+
+[node name="Label" type="Label" parent="."]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = 50.0
+offset_top = 28.0
+offset_right = 508.0
+offset_bottom = 101.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_mnogw")
+theme_override_font_sizes/font_size = 50
+text = "Введите никнейм:"
+metadata/_edit_use_anchors_ = true
+
+[node name="Поле, пон, братуха" type="Sprite2D" parent="."]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+position = Vector2(284, 428)
+scale = Vector2(0.635185, 0.612963)
+texture = ExtResource("3_gf7sg")
+
+[node name="А1" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = -274.0
+offset_top = -261.0
+offset_right = -220.0
+offset_bottom = -209.0
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="А2" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = -274.0
+offset_top = -206.0
+offset_right = -220.0
+offset_bottom = -152.0
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="А3" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = -274.0
+offset_top = -150.0
+offset_right = -220.0
+offset_bottom = -96.0
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="А4" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = -274.0
+offset_top = -93.0
+offset_right = -220.0
+offset_bottom = -38.0
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="А5" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = -274.0
+offset_top = -36.0
+offset_right = -220.0
+offset_bottom = 18.0
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="А6" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = -272.0
+offset_top = 21.0
+offset_right = -220.0
+offset_bottom = 75.0
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="А7" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = -274.0
+offset_top = 77.0
+offset_right = -220.0
+offset_bottom = 132.0
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="А8" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = -274.0
+offset_top = 135.0
+offset_right = -220.0
+offset_bottom = 188.0
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="А9" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = -274.0
+offset_top = 191.0
+offset_right = -220.0
+offset_bottom = 246.0
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="А10" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = -274.0
+offset_top = 248.0
+offset_right = -220.0
+offset_bottom = 302.0
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Б1" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = -215.685
+offset_top = -261.027
+offset_right = -161.685
+offset_bottom = -209.027
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Б2" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = -215.685
+offset_top = -206.027
+offset_right = -161.685
+offset_bottom = -152.027
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Б3" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = -215.685
+offset_top = -150.027
+offset_right = -161.685
+offset_bottom = -96.0272
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Б4" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = -215.685
+offset_top = -93.0272
+offset_right = -161.685
+offset_bottom = -38.0272
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Б5" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = -215.685
+offset_top = -36.0272
+offset_right = -161.685
+offset_bottom = 17.9728
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Б6" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = -217.0
+offset_top = 21.0
+offset_right = -161.0
+offset_bottom = 75.0
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Б7" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = -215.685
+offset_top = 76.9728
+offset_right = -161.685
+offset_bottom = 131.973
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Б8" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = -215.685
+offset_top = 134.973
+offset_right = -161.685
+offset_bottom = 187.973
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Б9" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = -215.685
+offset_top = 190.973
+offset_right = -161.685
+offset_bottom = 245.973
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Б10" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = -215.685
+offset_top = 247.973
+offset_right = -161.685
+offset_bottom = 301.973
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="В1" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = -159.009
+offset_top = -262.631
+offset_right = -105.009
+offset_bottom = -210.631
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="В2" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = -159.009
+offset_top = -207.631
+offset_right = -105.009
+offset_bottom = -153.631
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="В3" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = -159.009
+offset_top = -151.631
+offset_right = -105.009
+offset_bottom = -97.6313
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="В4" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = -159.009
+offset_top = -94.6314
+offset_right = -105.009
+offset_bottom = -39.6314
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="В5" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = -159.009
+offset_top = -37.6313
+offset_right = -105.009
+offset_bottom = 16.3687
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="В6" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = -160.583
+offset_top = 21.2085
+offset_right = -104.583
+offset_bottom = 75.2085
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="В7" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = -159.009
+offset_top = 75.3687
+offset_right = -105.009
+offset_bottom = 130.369
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="В8" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = -159.009
+offset_top = 133.369
+offset_right = -105.009
+offset_bottom = 186.369
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="В9" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = -159.009
+offset_top = 189.369
+offset_right = -105.009
+offset_bottom = 244.369
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="В10" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = -159.009
+offset_top = 246.369
+offset_right = -105.009
+offset_bottom = 300.369
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Г1" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = -100.694
+offset_top = -262.659
+offset_right = -46.694
+offset_bottom = -210.659
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Г2" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = -100.694
+offset_top = -207.658
+offset_right = -46.694
+offset_bottom = -153.658
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Г3" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = -100.694
+offset_top = -151.659
+offset_right = -46.694
+offset_bottom = -97.6585
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Г4" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = -100.694
+offset_top = -94.6585
+offset_right = -46.694
+offset_bottom = -39.6585
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Г5" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = -100.694
+offset_top = -37.6586
+offset_right = -46.694
+offset_bottom = 16.3414
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Г6" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = -103.907
+offset_top = 21.2085
+offset_right = -47.9068
+offset_bottom = 75.2085
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Г7" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = -104.0
+offset_top = 75.0
+offset_right = -51.0
+offset_bottom = 130.0
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Г8" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = -103.907
+offset_top = 135.408
+offset_right = -49.9067
+offset_bottom = 188.408
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Г9" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = -103.907
+offset_top = 190.876
+offset_right = -49.9067
+offset_bottom = 245.876
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Г10" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = -103.907
+offset_top = 247.976
+offset_right = -49.9067
+offset_bottom = 301.976
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Д1" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = -48.8047
+offset_top = -264.263
+offset_right = 5.19533
+offset_bottom = -212.263
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Д2" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = -48.8047
+offset_top = -209.263
+offset_right = 5.19533
+offset_bottom = -155.263
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Д3" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = -48.8047
+offset_top = -153.263
+offset_right = 5.19533
+offset_bottom = -99.2629
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Д4" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = -48.8047
+offset_top = -96.2629
+offset_right = 5.19533
+offset_bottom = -41.2629
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Д5" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = -48.8047
+offset_top = -39.2629
+offset_right = 5.19533
+offset_bottom = 14.7371
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Д6" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = -45.656
+offset_top = 21.2084
+offset_right = 6.34399
+offset_bottom = 75.2085
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Д7" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = -48.8047
+offset_top = 73.7371
+offset_right = 5.19533
+offset_bottom = 128.737
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Д8" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = -48.8047
+offset_top = 131.737
+offset_right = 5.19533
+offset_bottom = 184.737
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Д9" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = -48.8047
+offset_top = 187.737
+offset_right = 5.19533
+offset_bottom = 242.737
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Д10" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = -48.8047
+offset_top = 244.737
+offset_right = 5.19533
+offset_bottom = 298.737
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Е1" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = 9.51012
+offset_top = -264.29
+offset_right = 63.5101
+offset_bottom = -212.29
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Е2" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = 9.51012
+offset_top = -209.29
+offset_right = 63.5101
+offset_bottom = -155.29
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Е3" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = 9.51012
+offset_top = -153.29
+offset_right = 63.5101
+offset_bottom = -99.29
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Е4" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = 9.51012
+offset_top = -96.2901
+offset_right = 63.5101
+offset_bottom = -41.2901
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Е5" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = 9.51012
+offset_top = -39.2901
+offset_right = 63.5101
+offset_bottom = 14.7099
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Е6" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+anchors_preset = -1
+anchor_left = -0.00066078
+anchor_top = -0.000308849
+anchor_right = 0.00230218
+anchor_bottom = -0.000308849
+offset_left = 9.44603
+offset_top = 21.2085
+offset_right = 61.446
+offset_bottom = 75.2085
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Е7" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = 9.51012
+offset_top = 73.7099
+offset_right = 63.5101
+offset_bottom = 128.71
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Е8" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = 9.51012
+offset_top = 131.71
+offset_right = 63.5101
+offset_bottom = 184.71
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Е9" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = 9.51012
+offset_top = 187.71
+offset_right = 63.5101
+offset_bottom = 242.71
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Е10" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = 9.44608
+offset_top = 246.344
+offset_right = 63.4461
+offset_bottom = 300.344
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Ж1" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = 67.6968
+offset_top = -261.027
+offset_right = 121.697
+offset_bottom = -209.027
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Ж2" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = 67.6968
+offset_top = -206.027
+offset_right = 121.697
+offset_bottom = -152.027
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Ж3" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = 67.6968
+offset_top = -150.027
+offset_right = 121.697
+offset_bottom = -96.0272
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Ж4" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = 67.6968
+offset_top = -93.0273
+offset_right = 121.697
+offset_bottom = -38.0273
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Ж5" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = 67.6968
+offset_top = -36.0272
+offset_right = 121.697
+offset_bottom = 17.9728
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Ж6" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = 67.6968
+offset_top = 21.2085
+offset_right = 119.697
+offset_bottom = 75.2085
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Ж7" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = 67.6968
+offset_top = 76.9728
+offset_right = 121.697
+offset_bottom = 131.973
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Ж8" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = 67.6968
+offset_top = 134.973
+offset_right = 121.697
+offset_bottom = 187.973
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Ж9" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = 67.6968
+offset_top = 190.973
+offset_right = 121.697
+offset_bottom = 245.973
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="Ж10" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = 67.6968
+offset_top = 247.973
+offset_right = 121.697
+offset_bottom = 301.973
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="З1" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = 122.927
+offset_top = -261.027
+offset_right = 176.927
+offset_bottom = -209.027
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="З2" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = 122.927
+offset_top = -206.027
+offset_right = 176.927
+offset_bottom = -152.027
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="З3" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = 122.927
+offset_top = -150.027
+offset_right = 176.927
+offset_bottom = -96.0272
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="З4" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = 122.927
+offset_top = -93.0272
+offset_right = 176.927
+offset_bottom = -38.0272
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="З5" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = 122.927
+offset_top = -36.0272
+offset_right = 176.927
+offset_bottom = 17.9728
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="З6" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = 124.373
+offset_top = 21.2084
+offset_right = 176.373
+offset_bottom = 75.2084
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="З7" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = 122.927
+offset_top = 76.9728
+offset_right = 176.927
+offset_bottom = 131.973
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="З8" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = 122.927
+offset_top = 134.973
+offset_right = 176.927
+offset_bottom = 187.973
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="З9" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = 122.927
+offset_top = 190.973
+offset_right = 176.927
+offset_bottom = 245.973
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="З10" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = 122.927
+offset_top = 247.973
+offset_right = 176.927
+offset_bottom = 301.973
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="И1" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = 179.475
+offset_top = -262.659
+offset_right = 233.475
+offset_bottom = -210.659
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="И2" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = 179.475
+offset_top = -207.659
+offset_right = 233.475
+offset_bottom = -153.659
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="И3" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = 179.475
+offset_top = -151.659
+offset_right = 233.475
+offset_bottom = -97.6587
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="И4" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = 179.475
+offset_top = -94.6587
+offset_right = 233.475
+offset_bottom = -39.6587
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="И5" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = 179.475
+offset_top = -37.6587
+offset_right = 233.475
+offset_bottom = 16.3413
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="И6" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = 181.475
+offset_top = 19.3413
+offset_right = 233.475
+offset_bottom = 73.3413
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="И7" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = 179.475
+offset_top = 75.3413
+offset_right = 233.475
+offset_bottom = 130.341
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="И8" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = 179.475
+offset_top = 133.341
+offset_right = 233.475
+offset_bottom = 186.341
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="И9" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = 179.475
+offset_top = 189.341
+offset_right = 233.475
+offset_bottom = 244.341
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="И10" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = 179.475
+offset_top = 246.341
+offset_right = 233.475
+offset_bottom = 300.341
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="К1" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = 236.152
+offset_top = -261.027
+offset_right = 290.152
+offset_bottom = -209.027
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="К2" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = 236.152
+offset_top = -206.027
+offset_right = 290.152
+offset_bottom = -152.027
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="К3" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = 236.152
+offset_top = -150.027
+offset_right = 290.152
+offset_bottom = -96.0272
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="К4" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = 236.152
+offset_top = -93.0273
+offset_right = 290.152
+offset_bottom = -38.0273
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="К5" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = 236.152
+offset_top = -36.0273
+offset_right = 290.152
+offset_bottom = 17.9727
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="К6" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = 238.152
+offset_top = 20.9728
+offset_right = 290.152
+offset_bottom = 74.9728
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="К7" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = 236.152
+offset_top = 76.9727
+offset_right = 290.152
+offset_bottom = 131.973
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="К8" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = 236.152
+offset_top = 134.973
+offset_right = 290.152
+offset_bottom = 187.973
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="К9" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = 236.152
+offset_top = 190.973
+offset_right = 290.152
+offset_bottom = 245.973
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="К10" type="Button" parent="Поле, пон, братуха"]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = 236.152
+offset_top = 247.973
+offset_right = 290.152
+offset_bottom = 301.973
+theme_override_colors/icon_pressed_color = Color(0, 0, 0, 1)
+icon = ExtResource("4_60rns")
+flat = true
+icon_alignment = 1
+expand_icon = true
+script = ExtResource("5_kwsaj")
+metadata/_edit_use_anchors_ = true
+
+[node name="LineEdit" type="LineEdit" parent="."]
+unique_name_in_owner = true
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = 172.0
+offset_top = 106.0
+offset_right = 875.0
+offset_bottom = 187.0
+theme_override_fonts/font = ExtResource("2_mnogw")
+theme_override_font_sizes/font_size = 50
+max_length = 9
+script = ExtResource("5_x70i6")
+metadata/_edit_use_anchors_ = true
+
+[node name="OptionButton" type="OptionButton" parent="."]
+unique_name_in_owner = true
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = 51.0
+offset_top = 109.0
+offset_right = 161.0
+offset_bottom = 184.0
+selected = 0
+fit_to_longest_item = false
+item_count = 5
+popup/item_0/icon = ExtResource("5_xd2ec")
+popup/item_0/id = 0
+popup/item_1/icon = SubResource("CompressedTexture2D_vj0p2")
+popup/item_1/id = 1
+popup/item_2/icon = ExtResource("8_1auue")
+popup/item_2/id = 2
+popup/item_3/icon = ExtResource("9_ykine")
+popup/item_3/id = 3
+popup/item_4/icon = ExtResource("10_xqqcr")
+popup/item_4/id = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+
+[node name="Button2" type="Button" parent="."]
+clip_children = 2
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = 701.0
+offset_top = 543.0
+offset_right = 939.0
+offset_bottom = 605.0
+theme_override_colors/font_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/font_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_disabled_color = Color(0.715964, 0.473906, 0.368298, 1)
+theme_override_colors/icon_hover_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_hover_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_pressed_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/icon_normal_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_colors/font_color = Color(0.916283, 0.873965, 0.974896, 1)
+theme_override_colors/font_focus_color = Color(1, 1, 1, 1)
+theme_override_colors/font_pressed_color = Color(0.438832, 0.264144, 0.087944, 1)
+theme_override_fonts/font = SubResource("FontFile_my81h")
+theme_override_font_sizes/font_size = 40
+text = "сбросить"
+flat = true
+script = ExtResource("11_uxqc5")
+metadata/_edit_use_anchors_ = true
+
+[node name="Катер" type="Button" parent="."]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = 689.0
+offset_top = 197.0
+offset_right = 1122.0
+offset_bottom = 422.0
+scale = Vector2(0.602438, 0.352256)
+icon = ExtResource("11_2t7he")
+clip_text = true
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Эсминец" type="Button" parent="."]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = 688.0
+offset_top = 279.0
+offset_right = 1121.0
+offset_bottom = 504.0
+scale = Vector2(0.602438, 0.352256)
+icon = ExtResource("12_rbgyu")
+clip_text = true
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Линкор" type="Button" parent="."]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = 689.0
+offset_top = 360.0
+offset_right = 1122.0
+offset_bottom = 585.0
+scale = Vector2(0.602438, 0.352256)
+icon = ExtResource("13_l0gwx")
+clip_text = true
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Крейсер" type="Button" parent="."]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = 689.0
+offset_top = 442.0
+offset_right = 1122.0
+offset_bottom = 669.0
+scale = Vector2(0.602438, 0.352256)
+icon = ExtResource("14_c5axn")
+clip_text = true
+expand_icon = true
+script = ExtResource("16_7rlh3")
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect" type="TextureRect" parent="."]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = 677.0
+offset_top = 514.0
+offset_right = 1413.0
+offset_bottom = 1817.0
+rotation = -0.279708
+scale = Vector2(0.389287, 0.0147257)
+texture = ExtResource("16_wflev")
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect2" type="TextureRect" parent="."]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = 682.0
+offset_top = 431.0
+offset_right = 1418.0
+offset_bottom = 1734.0
+rotation = 0.284944
+scale = Vector2(0.389287, 0.0147257)
+texture = ExtResource("16_wflev")
+metadata/_edit_use_anchors_ = true
+
+[node name="TextureRect3" type="TextureRect" parent="."]
+light_mask = 2
+visibility_layer = 2
+z_index = 10
+offset_left = 963.0
+offset_top = 428.0
+offset_right = 1699.0
+offset_bottom = 1731.0
+scale = Vector2(0.24, 0.0799988)
+texture = ExtResource("16_wflev")
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="."]
+light_mask = 2
+z_index = 10
+offset_left = 965.0
+offset_top = 428.0
+offset_right = 1164.0
+offset_bottom = 532.0
+scale = Vector2(0.880007, 1)
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("10_7pg6t")
+theme_override_font_sizes/font_size = 25
+text = "В стадии 
+разработки"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Button" type="Button" parent="."]
+light_mask = 2
+z_index = 10
+offset_left = 963.0
+offset_top = 198.0
+offset_right = 1140.0
+offset_bottom = 418.0
+rotation = -0.000302916
+theme_override_fonts/font = ExtResource("2_mnogw")
+theme_override_font_sizes/font_size = 13
+text = "нажмите, чтобы продолжить"
+icon = ExtResource("17_btac8")
+clip_text = true
+icon_alignment = 1
+vertical_icon_alignment = 0
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Влед" type="Sprite2D" parent="."]
+visibility_layer = 513
+position = Vector2(-122, -98)
+scale = Vector2(4.18437, 5.78906)
+texture = ExtResource("19_ojdm7")
+centered = false
+offset = Vector2(0, 10)
+
+[connection signal="pressed" from="Поле, пон, братуха/А1" to="Поле, пон, братуха/А1" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/А2" to="Поле, пон, братуха/А2" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/А3" to="Поле, пон, братуха/А3" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/А4" to="Поле, пон, братуха/А4" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/А5" to="Поле, пон, братуха/А5" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/А6" to="Поле, пон, братуха/А6" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/А7" to="Поле, пон, братуха/А7" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/А8" to="Поле, пон, братуха/А8" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/А9" to="Поле, пон, братуха/А9" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/А10" to="Поле, пон, братуха/А10" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/Б1" to="Поле, пон, братуха/Б1" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/Б2" to="Поле, пон, братуха/Б2" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/Б3" to="Поле, пон, братуха/Б3" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/Б4" to="Поле, пон, братуха/Б4" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/Б5" to="Поле, пон, братуха/Б5" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/Б6" to="Поле, пон, братуха/Б6" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/Б7" to="Поле, пон, братуха/Б7" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/Б8" to="Поле, пон, братуха/Б8" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/Б9" to="Поле, пон, братуха/Б9" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/Б10" to="Поле, пон, братуха/Б10" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/В1" to="Поле, пон, братуха/В1" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/В2" to="Поле, пон, братуха/В2" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/В3" to="Поле, пон, братуха/В3" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/В4" to="Поле, пон, братуха/В4" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/В5" to="Поле, пон, братуха/В5" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/В6" to="Поле, пон, братуха/В6" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/В7" to="Поле, пон, братуха/В7" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/В8" to="Поле, пон, братуха/В8" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/В9" to="Поле, пон, братуха/В9" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/В10" to="Поле, пон, братуха/В10" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/Г1" to="Поле, пон, братуха/Г1" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/Г2" to="Поле, пон, братуха/Г2" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/Г3" to="Поле, пон, братуха/Г3" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/Г4" to="Поле, пон, братуха/Г4" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/Г5" to="Поле, пон, братуха/Г5" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/Г6" to="Поле, пон, братуха/Г6" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/Г7" to="Поле, пон, братуха/Г7" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/Г8" to="Поле, пон, братуха/Г8" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/Г9" to="Поле, пон, братуха/Г9" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/Г10" to="Поле, пон, братуха/Г10" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/Д1" to="Поле, пон, братуха/Д1" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/Д2" to="Поле, пон, братуха/Д2" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/Д3" to="Поле, пон, братуха/Д3" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/Д4" to="Поле, пон, братуха/Д4" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/Д5" to="Поле, пон, братуха/Д5" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/Д6" to="Поле, пон, братуха/Д6" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/Д7" to="Поле, пон, братуха/Д7" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/Д8" to="Поле, пон, братуха/Д8" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/Д9" to="Поле, пон, братуха/Д9" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/Д10" to="Поле, пон, братуха/Д10" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/Е1" to="Поле, пон, братуха/Е1" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/Е2" to="Поле, пон, братуха/Е2" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/Е3" to="Поле, пон, братуха/Е3" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/Е4" to="Поле, пон, братуха/Е4" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/Е5" to="Поле, пон, братуха/Е5" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/Е6" to="Поле, пон, братуха/Е6" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/Е7" to="Поле, пон, братуха/Е7" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/Е8" to="Поле, пон, братуха/Е8" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/Е9" to="Поле, пон, братуха/Е9" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/Е10" to="Поле, пон, братуха/Е10" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/Ж1" to="Поле, пон, братуха/Ж1" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/Ж2" to="Поле, пон, братуха/Ж2" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/Ж3" to="Поле, пон, братуха/Ж3" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/Ж4" to="Поле, пон, братуха/Ж4" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/Ж5" to="Поле, пон, братуха/Ж5" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/Ж6" to="Поле, пон, братуха/Ж6" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/Ж7" to="Поле, пон, братуха/Ж7" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/Ж8" to="Поле, пон, братуха/Ж8" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/Ж9" to="Поле, пон, братуха/Ж9" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/Ж10" to="Поле, пон, братуха/Ж10" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/З1" to="Поле, пон, братуха/З1" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/З2" to="Поле, пон, братуха/З2" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/З3" to="Поле, пон, братуха/З3" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/З4" to="Поле, пон, братуха/З4" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/З5" to="Поле, пон, братуха/З5" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/З6" to="Поле, пон, братуха/З6" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/З7" to="Поле, пон, братуха/З7" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/З8" to="Поле, пон, братуха/З8" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/З9" to="Поле, пон, братуха/З9" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/З10" to="Поле, пон, братуха/З10" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/И1" to="Поле, пон, братуха/И1" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/И2" to="Поле, пон, братуха/И2" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/И3" to="Поле, пон, братуха/И3" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/И4" to="Поле, пон, братуха/И4" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/И5" to="Поле, пон, братуха/И5" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/И6" to="Поле, пон, братуха/И6" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/И7" to="Поле, пон, братуха/И7" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/И8" to="Поле, пон, братуха/И8" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/И9" to="Поле, пон, братуха/И9" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/И10" to="Поле, пон, братуха/И10" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/К1" to="Поле, пон, братуха/К1" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/К2" to="Поле, пон, братуха/К2" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/К3" to="Поле, пон, братуха/К3" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/К4" to="Поле, пон, братуха/К4" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/К5" to="Поле, пон, братуха/К5" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/К6" to="Поле, пон, братуха/К6" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/К7" to="Поле, пон, братуха/К7" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/К8" to="Поле, пон, братуха/К8" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/К9" to="Поле, пон, братуха/К9" method="_on_pressed"]
+[connection signal="pressed" from="Поле, пон, братуха/К10" to="Поле, пон, братуха/К10" method="_on_pressed"]
+[connection signal="pressed" from="Button2" to="Button2" method="_on_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/А1" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/А2" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/А3" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/А4" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/А5" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/А6" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/А7" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/А8" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/А9" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/А10" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/Б1" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/Б2" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/Б3" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/Б4" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/Б5" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/Б6" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/Б7" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/Б8" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/Б9" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/Б10" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/В1" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/В2" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/В3" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/В4" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/В5" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/В6" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/В7" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/В8" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/В9" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/В10" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/Г1" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/Г2" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/Г3" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/Г4" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/Г5" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/Г6" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/Г7" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/Г8" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/Г9" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/Г10" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/Д1" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/Д2" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/Д3" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/Д4" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/Д5" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/Д6" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/Д7" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/Д8" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/Д9" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/Д10" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/Е1" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/Е2" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/Е3" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/Е4" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/Е5" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/Е6" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/Е7" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/Е8" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/Е9" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/Е10" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/Ж1" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/Ж2" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/Ж3" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/Ж4" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/Ж5" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/Ж6" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/Ж7" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/Ж8" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/Ж9" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/Ж10" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/З1" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/З2" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/З3" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/З4" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/З5" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/З6" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/З7" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/З8" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/З9" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/З10" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/И1" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/И2" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/И3" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/И4" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/И5" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/И6" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/И7" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/И8" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/И9" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/И10" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/К1" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/К2" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/К3" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/К4" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/К5" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/К6" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/К7" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/К8" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/К9" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Катер" to="Поле, пон, братуха/К10" method="_on_button_3_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/А1" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/А2" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/А3" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/А4" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/А5" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/А6" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/А7" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/А8" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/А9" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/А10" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/Б1" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/Б2" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/Б3" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/Б4" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/Б5" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/Б6" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/Б7" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/Б8" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/Б9" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/Б10" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/В1" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/В2" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/В3" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/В4" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/В5" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/В6" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/В7" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/В8" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/В9" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/В10" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/Г1" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/Г2" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/Г3" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/Г4" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/Г5" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/Г6" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/Г7" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/Г8" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/Г9" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/Г10" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/Д1" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/Д2" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/Д3" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/Д4" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/Д5" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/Д6" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/Д7" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/Д8" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/Д9" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/Д10" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/Е1" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/Е2" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/Е3" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/Е4" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/Е5" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/Е6" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/Е7" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/Е8" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/Е9" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/Е10" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/Ж1" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/Ж2" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/Ж3" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/Ж4" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/Ж5" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/Ж6" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/Ж7" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/Ж8" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/Ж9" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/Ж10" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/З1" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/З2" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/З3" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/З4" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/З5" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/З6" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/З7" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/З8" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/З9" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/З10" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/И1" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/И2" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/И3" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/И4" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/И5" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/И6" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/И7" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/И8" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/И9" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/И10" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/К1" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/К2" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/К3" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/К4" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/К5" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/К6" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/К7" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/К8" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/К9" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Эсминец" to="Поле, пон, братуха/К10" method="_on_button_4_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/А1" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/А2" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/А3" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/А4" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/А5" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/А6" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/А7" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/А8" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/А9" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/А10" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/Б1" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/Б2" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/Б3" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/Б4" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/Б5" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/Б6" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/Б7" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/Б8" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/Б9" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/Б10" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/В1" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/В2" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/В3" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/В4" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/В5" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/В6" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/В7" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/В8" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/В9" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/В10" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/Г1" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/Г2" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/Г3" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/Г4" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/Г5" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/Г6" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/Г7" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/Г8" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/Г9" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/Г10" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/Д1" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/Д2" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/Д3" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/Д4" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/Д5" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/Д6" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/Д7" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/Д8" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/Д9" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/Д10" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/Е1" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/Е2" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/Е3" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/Е4" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/Е5" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/Е6" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/Е7" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/Е8" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/Е9" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/Е10" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/Ж1" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/Ж2" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/Ж3" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/Ж4" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/Ж5" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/Ж6" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/Ж7" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/Ж8" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/Ж9" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/Ж10" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/З1" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/З2" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/З3" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/З4" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/З5" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/З6" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/З7" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/З8" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/З9" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/З10" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/И1" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/И2" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/И3" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/И4" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/И5" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/И6" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/И7" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/И8" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/И9" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/И10" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/К1" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/К2" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/К3" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/К4" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/К5" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/К6" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/К7" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/К8" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/К9" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Линкор" to="Поле, пон, братуха/К10" method="_on_button_5_pressed"]
+[connection signal="pressed" from="Крейсер" to="Крейсер" method="_on_pressed"]

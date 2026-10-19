@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=3 uid="uid://duhe37v83jn2f"]
+
+[ext_resource type="Script" path="res://button.gd" id="1_au804"]
+[ext_resource type="FontFile" uid="uid://d0aphwgj6ke1j" path="res://Calligrapher Regular.ttf" id="1_re020"]
+[ext_resource type="AudioStream" uid="uid://d2xayxr4or7sh" path="res://Sounds/Into the Depths.mp3" id="3_wpr0o"]
+[ext_resource type="Script" path="res://music.gd" id="4_o6e65"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_02mcg"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_au804")
+
+[node name="GameManager" type="Node" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1156.0
+offset_bottom = 652.0
+
+[node name="Button" type="Button" parent="."]
+offset_left = 378.0
+offset_top = 400.0
+offset_right = 785.0
+offset_bottom = 544.0
+theme_override_fonts/font = ExtResource("1_re020")
+theme_override_font_sizes/font_size = 70
+text = "Играть"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_02mcg")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 187.0
+offset_top = 103.0
+offset_right = 974.0
+offset_bottom = 279.0
+theme_override_colors/font_color = Color(0.174541, 0.745069, 0.862328, 1)
+theme_override_fonts/font = ExtResource("1_re020")
+theme_override_font_sizes/font_size = 90
+text = "Морской бой"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_wpr0o")
+volume_db = -5.0
+autoplay = true
+parameters/looping = true
+script = ExtResource("4_o6e65")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

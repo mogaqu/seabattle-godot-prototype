@@ -1,0 +1,61 @@
+[gd_scene load_steps=6 format=3 uid="uid://04b63pghmrgj"]
+
+[ext_resource type="Texture2D" uid="uid://ptnxrry857aw" path="res://влед.jpg" id="1_4o7ny"]
+[ext_resource type="FontFile" uid="uid://lamsid6o7pnq" path="res://JetBrainsMono-Regular.ttf" id="2_0xx5m"]
+[ext_resource type="FontFile" uid="uid://cd7vh2wuxctt6" path="res://Jost-400-Book.otf" id="3_cwvq1"]
+[ext_resource type="Script" uid="uid://oqb5sge66j6" path="res://button_3.gd" id="4_p75ep"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lhmg3"]
+bg_color = Color(6.16074e-06, 0.653251, 0.878143, 1)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_right = 1173.0
+offset_bottom = 666.0
+texture = ExtResource("1_4o7ny")
+
+[node name="Label" type="Label" parent="TextureRect"]
+layout_mode = 0
+offset_right = 1174.0
+offset_bottom = 548.0
+theme_override_fonts/font = ExtResource("2_0xx5m")
+theme_override_font_sizes/font_size = 19
+text = "*Как начать игру*
+1. Нажать кнопку \"играть\"
+2. Введите никнейм(не используйте свою персональную информацию)
+3. Раставьте корабли по игровой сетке
+4. Если получилось так, что невозможно поставить корабль до конца, то используйте кнопку \"сбросить\"
+5. Нажмите на клавишу enter (Ввод)
+6. Выберите, за кого вы будете играть(сервер(создаёт игру) или игрок(присоединяется к игре))
+7. Если вы сервер, то сообщите код игроку
+Если вы игрок, то введите код, который вы получили от сервера
+*Как играть*
+1. При нажатии на кнопку \"завертикалить\", твои корабли будут отзеркалены, но ты пропускаешь 1 ход
+2. Или можете атаковать противника, нажимая на его клетки
+*Отличия от классического морского боя:*
+1. Игроку не говорится, когда он убил вражеский корабль
+2. \"Завертикалить\" — это как взять корабль и \"отзеркалить\" его через середину поля. Он остаётся на той же высоте (цифра не меняется), но перескакивает на противоположную сторону по буквам. Если он был близко к левому краю, то окажется близко к правому, и наоборот.
+3. На поле, на которое игрок атаковал может появится корабль, если оппонент применил функцию \"завертикалить\"."
+autowrap_mode = 1
+
+[node name="Button3" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = -0.00870322
+anchor_top = 0.206471
+anchor_right = -0.00870322
+anchor_bottom = 0.366718
+offset_left = 425.0
+offset_top = 535.0
+offset_right = 721.0
+offset_bottom = 715.0
+scale = Vector2(1, 0.68)
+theme_override_fonts/font = ExtResource("3_cwvq1")
+theme_override_font_sizes/font_size = 70
+theme_override_styles/hover = SubResource("StyleBoxFlat_lhmg3")
+text = "назад"
+clip_text = true
+script = ExtResource("4_p75ep")
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="Button3" to="Button3" method="_on_pressed"]

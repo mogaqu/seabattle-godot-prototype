@@ -1,0 +1,98 @@
+[gd_scene load_steps=6 format=3 uid="uid://15pkylrxveic"]
+
+[ext_resource type="Script" uid="uid://byavetdepulml" path="res://2new_script.gd" id="1_tntu4"]
+[ext_resource type="FontFile" uid="uid://lamsid6o7pnq" path="res://JetBrainsMono-Regular.ttf" id="2_ia6fk"]
+[ext_resource type="FontFile" uid="uid://cd7vh2wuxctt6" path="res://Jost-400-Book.otf" id="4_mat32"]
+[ext_resource type="Script" uid="uid://rep0ufgmut7j" path="res://buttokodn.gd" id="4_tn4rx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rvwvj"]
+bg_color = Color(0.103744, 0.103744, 0.103743, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_tntu4")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 1.0
+offset_top = -4.0
+offset_right = 1150.0
+offset_bottom = 649.0
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 7.0
+offset_top = 445.0
+offset_right = 1146.0
+offset_bottom = 640.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_rvwvj")
+
+[node name="Label2" type="Label" parent="."]
+light_mask = 2
+visibility_layer = 2
+z_index = 2
+offset_left = 13.0
+offset_top = 449.0
+offset_right = 1143.0
+offset_bottom = 635.0
+theme_override_colors/font_color = Color(0.595355, 0.751151, 0.97375, 1)
+theme_override_fonts/font = ExtResource("2_ia6fk")
+theme_override_font_sizes/font_size = 20
+text = "test"
+
+[node name="Label3" type="Label" parent="."]
+anchors_preset = -1
+anchor_left = -0.006
+anchor_top = -2.39
+anchor_right = -0.006
+anchor_bottom = -2.39
+offset_left = 10.018
+offset_top = 336.0
+offset_right = 1153.02
+offset_bottom = 402.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_mat32")
+theme_override_font_sizes/font_size = 45
+text = "Отладка"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LineEdit" type="LineEdit" parent="."]
+offset_left = 141.0
+offset_top = 248.0
+offset_right = 923.0
+offset_bottom = 310.0
+
+[node name="Label" type="Label" parent="."]
+offset_left = 634.0
+offset_top = 188.0
+offset_right = 674.0
+offset_bottom = 254.0
+rotation = 1.57425
+scale = Vector2(1.39521, 1.51976)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_mat32")
+theme_override_font_sizes/font_size = 40
+text = "->"
+
+[node name="Label4" type="Label" parent="."]
+offset_left = 42.0
+offset_top = 108.0
+offset_right = 1115.0
+offset_bottom = 174.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("4_mat32")
+theme_override_font_sizes/font_size = 50
+text = "Код игры вводить здесь"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="."]
+offset_left = 938.0
+offset_top = 235.0
+offset_right = 1090.0
+offset_bottom = 320.0
+text = "кнопка для ввода"
+script = ExtResource("4_tn4rx")
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

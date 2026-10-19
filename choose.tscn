@@ -1,0 +1,74 @@
+[gd_scene load_steps=5 format=3 uid="uid://bu6d488t8rj8a"]
+
+[ext_resource type="Script" uid="uid://tfjgd7xf0wfj" path="res://node.gd" id="1_qwkxe"]
+[ext_resource type="Script" uid="uid://c415qely7t1m4" path="res://multiplayer_hud.gd" id="2_43wqg"]
+[ext_resource type="VideoStream" uid="uid://5hca12ll5m6n" path="res://love.gif.ogv" id="3_gm563"]
+[ext_resource type="FontFile" uid="uid://cd7vh2wuxctt6" path="res://Jost-400-Book.otf" id="3_r7tah"]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(131, 212)
+
+[node name="Node" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("1_qwkxe")
+
+[node name="MultiplayerHUD" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 0
+offset_left = -16.0
+offset_right = 119.0
+script = ExtResource("2_43wqg")
+metadata/_edit_use_anchors_ = true
+
+[node name="Panel" type="Panel" parent="MultiplayerHUD"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -5.0
+offset_top = 1.0
+offset_right = 784.0
+offset_bottom = 395.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MultiplayerHUD/Panel"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = -1.0
+offset_right = 917.0
+offset_bottom = 372.0
+alignment = 1
+
+[node name="HostGame" type="Button" parent="MultiplayerHUD/Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_r7tah")
+theme_override_font_sizes/font_size = 50
+text = "Присоединиться за игрока 1 (сервер)"
+
+[node name="JoinAsPlayer2" type="Button" parent="MultiplayerHUD/Panel/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("3_r7tah")
+theme_override_font_sizes/font_size = 50
+text = "Присоединиться за игрока 2 (клиент)"
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="MultiplayerHUD/Panel/VBoxContainer"]
+layout_direction = 1
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+stream = ExtResource("3_gm563")
+autoplay = true
+loop = true
+
+[node name="ColorRect" type="ColorRect" parent="MultiplayerHUD"]
+show_behind_parent = true
+layout_mode = 2
+offset_left = -118.0
+offset_top = -212.0
+offset_right = 1039.0
+offset_bottom = 439.0
+
+[connection signal="pressed" from="MultiplayerHUD/Panel/VBoxContainer/HostGame" to="Node" method="become_host"]
+[connection signal="pressed" from="MultiplayerHUD/Panel/VBoxContainer/JoinAsPlayer2" to="Node" method="join_as_player_2"]

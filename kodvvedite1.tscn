@@ -1,0 +1,91 @@
+[gd_scene load_steps=8 format=3 uid="uid://bbbyemxrx8lwv"]
+
+[ext_resource type="Script" uid="uid://c3v132rr5a78u" path="res://1new_script.gd" id="1_upoqq"]
+[ext_resource type="FontFile" uid="uid://cd7vh2wuxctt6" path="res://Jost-400-Book.otf" id="2_nkfjl"]
+[ext_resource type="Script" uid="uid://dun02vi1tow1l" path="res://node_2d.gd" id="3_je52n"]
+[ext_resource type="FontFile" uid="uid://lamsid6o7pnq" path="res://JetBrainsMono-Regular.ttf" id="4_gaeew"]
+[ext_resource type="Script" uid="uid://74sop2py2qgy" path="res://label_2.gd" id="5_u3s0o"]
+[ext_resource type="Script" uid="uid://dejsy3nh2tkna" path="res://label_4.gd" id="6_gvwe2"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rhbfd"]
+bg_color = Color(0.103744, 0.103744, 0.103743, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_upoqq")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_left = 1.0
+offset_top = -4.0
+offset_right = 1156.0
+offset_bottom = 643.0
+
+[node name="Label" type="Label" parent="."]
+unique_name_in_owner = true
+offset_left = -1.0
+offset_top = 126.0
+offset_right = 1155.0
+offset_bottom = 303.0
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_nkfjl")
+theme_override_font_sizes/font_size = 50
+text = "Код для присоединения противника (Игрока 2):
+
+Ожидание"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("3_je52n")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="Label2" type="Label" parent="."]
+light_mask = 2
+visibility_layer = 2
+z_index = 2
+offset_left = 11.0
+offset_top = 451.0
+offset_right = 1146.0
+offset_bottom = 635.0
+theme_override_colors/font_color = Color(0.595355, 0.751151, 0.97375, 1)
+theme_override_fonts/font = ExtResource("4_gaeew")
+theme_override_font_sizes/font_size = 20
+text = "test"
+script = ExtResource("5_u3s0o")
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 3.0
+offset_top = 361.0
+offset_right = 1154.0
+offset_bottom = 455.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_nkfjl")
+theme_override_font_sizes/font_size = 45
+text = "Отладка"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 4.0
+offset_top = 445.0
+offset_right = 1152.0
+offset_bottom = 640.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_rhbfd")
+
+[node name="Label4" type="Label" parent="."]
+offset_top = 175.0
+offset_right = 1156.0
+offset_bottom = 294.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "код не получен"
+horizontal_alignment = 1
+vertical_alignment = 1
+script = ExtResource("6_gvwe2")
+
+[connection signal="timeout" from="Timer" to="Label" method="_on_timer_timeout"]
+[connection signal="timeout" from="Timer" to="Label4" method="_on_timer_timeout"]

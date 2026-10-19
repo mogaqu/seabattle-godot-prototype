@@ -1,0 +1,14 @@
+[gd_resource type="AudioBusLayout" load_steps=3 format=3 uid="uid://dih12lts0wj8v"]
+
+[sub_resource type="AudioEffectFilter" id="AudioEffectFilter_iuv2q"]
+resource_name = "Filter"
+
+[sub_resource type="AudioEffectDelay" id="AudioEffectDelay_bslye"]
+resource_name = "Delay"
+
+[resource]
+bus/0/volume_db = -8.00903
+bus/0/effect/0/effect = SubResource("AudioEffectFilter_iuv2q")
+bus/0/effect/0/enabled = false
+bus/0/effect/1/effect = SubResource("AudioEffectDelay_bslye")
+bus/0/effect/1/enabled = false
